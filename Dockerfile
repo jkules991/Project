@@ -8,7 +8,7 @@ RUN mvn clean package
 
 FROM openjdk:8 AS runback
 
-WORKDIR /opt/backend-test
+WORKDIR /runtime
 
 COPY --from=backbuild /build/target/spring-petclinic-rest-2.6.2.jar app.jar
 
