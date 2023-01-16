@@ -2,7 +2,7 @@ FROM maven:3.8.4-openjdk-8 AS backbuild
 
 COPY . /build
 
-WORKDIR /app
+WORKDIR /build
 
 RUN mvn clean package
 
