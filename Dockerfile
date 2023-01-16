@@ -10,7 +10,7 @@ FROM openjdk:8 AS runback
 
 WORKDIR /opt/backend-test
 
-COPY --from=backbuild /build/target/spring-petclinic-rest-2.4.2.jar app.jar
+COPY --from=backbuild /build/target/spring-petclinic-rest-2.6.2.jar app.jar
 
 EXPOSE 9966
 
