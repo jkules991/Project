@@ -1,6 +1,6 @@
 FROM maven:3.8.4-openjdk-8 AS backbuild
 
-COPY . /build
+COPY . .
 
 WORKDIR /build
 
