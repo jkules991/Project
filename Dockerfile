@@ -14,4 +14,4 @@ COPY --from=backbuild /build/target/spring-petclinic-rest-2.4.2.jar app.jar
 
 EXPOSE 9966
 
-ENTRYPOINT ["java", "-jar", "spring-petclinic-rest-2.4.2.jar"]
+ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]
