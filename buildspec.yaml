@@ -5,11 +5,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws --version
-      - $(aws ecr get-login --region $eu-west-2 --no-include-email)
-      - REPOSITORY_URI=709410011461.dkr.ecr.eu-west-2.amazonaws.com/backend-ocker
-      - COMMIT_HASH=$(ECHO $codebuild_resolved_source_version | cut -c 1-7)
-      - IMAGE_TAG=build-$(echo £CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
+      - aws ecr get-login-password --region $eu-west-2 | docker login --username AWS --password-stdin $709410011461.dkr.ecr.eu-west-2.amazonaws.com/backend-ocker
   build:
     commands:
       - echo Build started on 'date'
