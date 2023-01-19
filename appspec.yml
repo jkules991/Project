@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: docker/middleman_docker_image.tar.gz
+  - source: 793320899105.dkr.ecr.eu-west-2.amazonaws.com/petclinic_repo:Latest
     destination: /home/
 hooks:
   ApplicationStop:
