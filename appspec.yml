@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: s3://codepipeline-eu-west-2-940580236013/pet-back-pipe/BuildArtif/4WjKODo
+  - source: 793320899105.dkr.ecr.eu-west-2.amazonaws.com/petclinic_repo:Latest
     destination: /home/
 hooks:
   ApplicationStop:
